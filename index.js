@@ -12,42 +12,26 @@ console.log("Pronto, com isso feito finalmente poderemos iniciar nova aventura!"
 while (laco != 1){
     console.log("Voce encontrou um inimigo!");
     opcao = prompt("Deseja lutar?\ns para lutar ou n para fugir: ");
-    while (opcao != "end") {
-        switch (opcao) {
+        switch (opcao){
             case "s":
                 console.log("Voce derrotou um inimigo e ganhou " + xpDropado + "experiencia.");
                 experiencia += xpDropado;
-                opcao = "end";
                 break;
             case "n":
                 console.log("Voce conseguiu fugir do inimigo!");
-                opcao = "end";
-                break;
-            default:
-                console.log("Selecione uma opção valida!");
-                opcao = prompt("Deseja lutar?\ns para lutar ou n para fugir: ");
                 break;
         }
-    }
     console.log("Deseja continuar a aventura?");
     opcao2 = prompt("s para continuar a aventura ou n para encerrar a aventura: ");
-    while (opcao2 != "end") {
         switch (opcao2) {
             case "s":
                 console.log("Voce decidiu continuar sua aventura!");
-                opcao2 = "end";
                 break;
             case "n":
                 console.log("Voce encerrou sua aventura!");
-                opcao2 = "end";
                 laco = 1;
                 break;
-            default:
-                console.log("Selecione uma opção valida!");
-                opcao2 = prompt("s para continuar a aventura ou n para encerrar a aventura: ");
-                break;
         }
-    }
     if (experiencia <= 1000) {
         nivel = "Ferro";
     } else if (experiencia >= 1001 && experiencia <= 2000) {
