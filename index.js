@@ -8,27 +8,27 @@ let nivel = "Ferro";
 let laco = 0;
 let opcao;
 let opcao2 = "";
-console.log("Pronto, com isso feito finalmente poderemos iniciar nova aventura!");
+console.log("Pronto, com isso feito finalmente poderemos iniciar nova aventura!\n");
 while (laco != 1){
-    console.log("Voce encontrou um inimigo!");
-    opcao = prompt("Deseja lutar?\ns para lutar ou n para fugir: ");
+    console.log("Voce encontrou um inimigo!\n");
+    opcao = prompt("Deseja lutar?\n\ns para lutar ou n para fugir: ");
         switch (opcao){
             case "s":
-                console.log("Voce derrotou um inimigo e ganhou " + xpDropado + "experiencia.");
+                console.log("\nVoce derrotou um inimigo e ganhou " + xpDropado + " experiencia.");
                 experiencia += xpDropado;
                 break;
             case "n":
                 console.log("Voce conseguiu fugir do inimigo!");
                 break;
         }
-    console.log("Deseja continuar a aventura?");
-    opcao2 = prompt("s para continuar a aventura ou n para encerrar a aventura: ");
+    console.log("\nDeseja continuar a aventura?");
+    opcao2 = prompt("\ns para continuar a aventura ou n para encerrar a aventura: ");
         switch (opcao2) {
             case "s":
-                console.log("Voce decidiu continuar sua aventura!");
+                console.log("\nVoce decidiu continuar sua aventura!");
                 break;
             case "n":
-                console.log("Voce encerrou sua aventura!");
+                console.log("\nVoce encerrou sua aventura!");
                 laco = 1;
                 break;
         }
@@ -52,6 +52,6 @@ while (laco != 1){
     } else if (experiencia >= 10001) {
         nivel = "Radiante";
     }
-    console.log("O Herói de nome " + nome + " está no nível de " + nivel + "!");
+    console.log("\n\nO Herói de nome " + nome + " está no nível de " + nivel + "!");
 }
-console.log("O Herói de nome " + nome + " encerrou sua jornada no nível de " + nivel + "!\nXp total do Herói: " + experiencia);
+console.log("\nO Herói de nome " + nome + " encerrou sua jornada no nível de " + nivel + "!\nXp total do Herói: " + experiencia);
